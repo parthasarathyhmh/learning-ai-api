@@ -28,6 +28,7 @@ export class CreateCourseDto {
   @IsEnum(SourceType)
   sourceType!: SourceType;
 
+  // Required only when sourceType = TEXT
   @IsOptional()
   @IsString()
   content?: string;

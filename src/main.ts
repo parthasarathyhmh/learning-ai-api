@@ -12,9 +12,10 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter(),
   );
-  await app.listen(process.env.PORT ?? 3000);
 
   await app.register(FastifyMultipart);
+  
+  await app.listen(process.env.PORT ?? 3000);
 
   app.useGlobalPipes(
   new ValidationPipe({

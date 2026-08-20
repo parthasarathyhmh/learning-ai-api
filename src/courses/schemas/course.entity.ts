@@ -53,7 +53,7 @@ export class Module {
 
 @Schema({ timestamps: true })
 export class Course {
-  @Prop({ required: true })
+  @Prop({ required: true, unique: true, trim: true })
   courseTitle: string;
 
   @Prop({
