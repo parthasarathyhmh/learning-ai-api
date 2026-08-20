@@ -437,4 +437,9 @@ export class CoursesService {
       );
     }
   }
+
+  async findAll() {
+    const courses = await this.courseModel.find({}, {source: 0}).exec();
+    return courses;
+  }
 }

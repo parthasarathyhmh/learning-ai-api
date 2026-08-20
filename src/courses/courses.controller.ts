@@ -12,5 +12,10 @@ export class CoursesController {
     return this.coursesService.generateCourse(request);
   }
 
+  @Get()
+  findAll() {
+    return this.coursesService.findAll();
+  }
+
   
 }
